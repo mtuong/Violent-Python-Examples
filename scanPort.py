@@ -66,7 +66,7 @@ def connScan(tgtHost, tgtPort):
     try:
         connSkt = socket(AF_INET, SOCK_STREAM)
         connSkt.connect((tgtHost, tgtPort))
-        connSkt.send('ViolentPython\r\n')
+        # connSkt.send('ViolentPython\r\n')
         results = connSkt.recv(100)
         screenLock.acquire()
         print('[+]%d/tcp open'% tgtPort)
